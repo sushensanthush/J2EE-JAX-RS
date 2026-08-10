@@ -16,6 +16,11 @@ public class User {
         return "OrderBy: " +orderBy.toString()+ "Age:" + age;
     }
 
+    @POST
+    public String post(@FormParam("name") String name) {
+        return "Username:"+name;
+    }
+
 
 
 }
