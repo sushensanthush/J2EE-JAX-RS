@@ -3,6 +3,8 @@ package k.susa.web.rest;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
+import java.util.List;
+
 
 @Path("/user")
 @Consumes({MediaType.APPLICATION_JSON})
@@ -10,8 +12,8 @@ import jakarta.ws.rs.core.MediaType;
 public class User {
 
     @GET
-    public String m(@QueryParam("name") String name, @QueryParam("age") int age) {
-        return "Name : " +name;
+    public String m(@QueryParam("orderBy") List<String> orderBy, @DefaultValue("100") @QueryParam("age") int age) {
+        return "OrderBy: " +orderBy.toString()+ "Age:" + age;
     }
 
 
