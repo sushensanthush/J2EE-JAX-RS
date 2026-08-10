@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @Path("/user")
-@Consumes({MediaType.APPLICATION_JSON})
+//@Consumes({MediaType.APPLICATION_JSON})
 //@Produces({MediaType.APPLICATION_XML})
 public class User {
 
